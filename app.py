@@ -112,7 +112,7 @@ else:
 st.divider()
 
 # Helper for rendering LeetCode styled feature cards
-def feature_card(title, emoji, items):
+def feature_card(title, items):
     items_html = "".join([f"<li style='margin-bottom:6px;'>{item}</li>" for item in items])
     card_html = f"""
     <div style="
