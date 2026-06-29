@@ -75,7 +75,7 @@ else:
                     "data" not in profile or 
                     not profile["data"] or 
                     profile["data"].get("matchedUser") is None):
-                    st.error("❌ LeetCode user not found. Please verify the username.")
+                    st.error(" LeetCode user not found. Please verify the username.")
                     st.stop()
 
                 # 2. Fetch the rest of the details
@@ -101,12 +101,12 @@ else:
                 # Keep only the 10 most recent searches
                 st.session_state["recent_searches"] = usernames[:10]
 
-                st.success("✅ Profile loaded successfully!")
-                st.info("👈 Open pages from the sidebar to explore analytics.")
+                st.success(" Profile loaded successfully!")
+                st.info(" Open pages from the sidebar to explore analytics.")
                 st.rerun()
 
             except Exception as e:
-                st.error(f"❌ Failed to fetch LeetCode data: {str(e)}")
+                st.error(f" Failed to fetch LeetCode data: {str(e)}")
 
 
 st.divider()
@@ -153,11 +153,11 @@ def tech_card(title, emoji, items):
     """
     st.markdown(card_html, unsafe_allow_html=True)
 
-st.divider()
+
 
 # -------------------- FEATURES --------------------
 
-st.header("✨ Dashboard Features")
+st.header(" Dashboard Features")
 
 row1_col1, row1_col2, row1_col3 = st.columns(3)
 
@@ -214,7 +214,7 @@ with row2_col3:
 st.divider()    
 # -------------------- DASHBOARD PREVIEW --------------------
 
-st.header("📸 Dashboard Preview")
+st.header(" Dashboard Preview")
 
 st.info(
     "Open the pages in the sidebar to view full interactive charts, heatmap calendar, AI feedback, and downloadable report sheets."
@@ -224,7 +224,7 @@ st.divider()
 
 # -------------------- PROJECT STATS --------------------
 
-st.header("📈 Dashboard Overview")
+st.header("Dashboard Overview")
 
 c1, c2, c3, c4 = st.columns(4)
 
@@ -244,26 +244,26 @@ st.divider()
 
 # -------------------- TECH STACK --------------------
 
-st.header("🛠 Tech Stack")
+st.header(" Tech Stack")
 
 tech_col1, tech_col2, tech_col3 = st.columns(3)
 
 with tech_col1:
-    tech_card("Python Core", "🐍", [
+    tech_card("Python Core",  [
         "Requests (HTTP / GraphQL)",
         "Pandas (Data manipulation)",
         "JSON (Data parsing)"
     ])
 
 with tech_col2:
-    tech_card("Visualization", "📊", [
+    tech_card("Visualization",  [
         "Streamlit (App Framework)",
         "Matplotlib (Theme-aware charts)",
         "HTML/CSS (LeetCode card containers)"
     ])
 
 with tech_col3:
-    tech_card("APIs & Reports", "🌐", [
+    tech_card("APIs & Reports",  [
         "LeetCode GraphQL Endpoints",
         "Google Gemini API (Generative AI)",
         "ReportLab (Themed PDF compilation)"
@@ -274,7 +274,7 @@ st.divider()
 # -------------------- ABOUT --------------------
 
 
-st.header("📖 About")
+st.header(" About")
 
 st.write("""
 LeetCode Analytics Dashboard helps developers explore public LeetCode profiles through interactive charts, topic-wise analytics, contest insights, GitHub-style submission calendars, AI-generated recommendations, and downloadable PDF reports.
@@ -287,7 +287,7 @@ st.divider()
 # -------------------- FOOTER --------------------
 
 st.caption(
-    "🚀 LeetCode Analytics Dashboard • Built with Python, Streamlit, GraphQL & Matplotlib"
+    " LeetCode Analytics Dashboard • Built with Python, Streamlit, GraphQL & Matplotlib"
 )
 
 st.caption("Made with ❤️ by Navya Mittal")
