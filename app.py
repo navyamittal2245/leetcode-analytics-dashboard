@@ -290,7 +290,7 @@ st.caption(
     " LeetCode Analytics Dashboard • Built with Python, Streamlit, GraphQL & Matplotlib"
 )
 
-st.caption("Made with ❤️ by Navya Mittal")
+st.caption("Developed by Navya Mittal")
 
 
 
