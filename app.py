@@ -17,7 +17,7 @@ st.set_page_config(
 
 # -------------------- HERO --------------------
 
-st.title("📊 LeetCode Analytics Dashboard")
+st.title(" LeetCode Analytics Dashboard")
 
 st.caption(
     "Analyze any public LeetCode profile with detailed analytics, interactive visualizations, AI-powered insights, and downloadable reports."
@@ -32,7 +32,7 @@ if "recent_searches" not in st.session_state:
 
 usernames = st.session_state["recent_searches"]
 
-st.subheader("🔍 Search Profile")
+st.subheader(" Search Profile")
 
 if "username" in st.session_state:
     st.success(f"Current Profile: {st.session_state['username']}")
@@ -112,7 +112,7 @@ else:
 st.divider()
 
 # Helper for rendering LeetCode styled feature cards
-def feature_card(title, emoji, items):
+def feature_card(title,  items):
     items_html = "".join([f"<li style='margin-bottom:6px;'>{item}</li>" for item in items])
     card_html = f"""
     <div style="
@@ -124,7 +124,7 @@ def feature_card(title, emoji, items):
         box-shadow: 0 4px 6px rgba(0,0,0,0.15);
         min-height: 250px;
     ">
-        <h4 style="color: #ffa116; margin-top:0; font-size:1.15rem; font-weight:bold;">{emoji} {title}</h4>
+        <h4 style="color: #ffa116; margin-top:0; font-size:1.15rem; font-weight:bold;"> {title}</h4>
         <ul style="color: #eff1f5; padding-left: 20px; margin-top: 10px; font-size: 0.9rem; line-height: 1.4;">
             {items_html}
         </ul>
@@ -145,7 +145,7 @@ def tech_card(title, items):
         box-shadow: 0 4px 6px rgba(0,0,0,0.15);
         min-height: 180px;
     ">
-        <h4 style="color: #eff1f5; margin-top:0; font-size:1.1rem; font-weight:bold;">{emoji} {title}</h4>
+        <h4 style="color: #eff1f5; margin-top:0; font-size:1.1rem; font-weight:bold;"> {title}</h4>
         <ul style="color: #eff1f5; padding-left: 20px; margin-top: 10px; font-size: 0.9rem; line-height: 1.4;">
             {items_html}
         </ul>
@@ -162,7 +162,7 @@ st.header(" Dashboard Features")
 row1_col1, row1_col2, row1_col3 = st.columns(3)
 
 with row1_col1:
-    feature_card("Profile", "👤", [
+    feature_card("Profile",  [
         "Avatar & Bio",
         "Global Ranking",
         "Reputation Score",
@@ -170,7 +170,7 @@ with row1_col1:
     ])
 
 with row1_col2:
-    feature_card("Question Analytics", "📚", [
+    feature_card("Question Analytics",  [
         "Difficulty Breakdown",
         "Topic-wise Analysis",
         "Top Strongest Topics",
@@ -178,7 +178,7 @@ with row1_col2:
     ])
 
 with row1_col3:
-    feature_card("Contest Analytics", "🏆", [
+    feature_card("Contest Analytics",  [
         "Contest Rating & Badge",
         "Global Ranking Position",
         "Attended Contest History",
@@ -188,7 +188,7 @@ with row1_col3:
 row2_col1, row2_col2, row2_col3 = st.columns(3)
 
 with row2_col1:
-    feature_card("Submission Calendar", "📅", [
+    feature_card("Submission Calendar",  [
         "LeetCode-themed Heatmap",
         "Active Streak Analysis",
         "Submission History Log",
@@ -196,7 +196,7 @@ with row2_col1:
     ])
 
 with row2_col2:
-    feature_card("AI Insights", "🤖", [
+    feature_card("AI Insights",  [
         "Interview Readiness Grade",
         "Gemini AI Study Evaluator",
         "Custom Practice Recommendations",
@@ -204,7 +204,7 @@ with row2_col2:
     ])
 
 with row2_col3:
-    feature_card("Export Report", "📄", [
+    feature_card("Export Report",  [
         "One-click PDF Generation",
         "Themed Analytics Tables",
         "High-contrast PNG Graphics",
