@@ -112,7 +112,7 @@ else:
 st.divider()
 
 # Helper for rendering LeetCode styled feature cards
-def feature_card(title, items):
+def feature_card(title, emoji, items):
     items_html = "".join([f"<li style='margin-bottom:6px;'>{item}</li>" for item in items])
     card_html = f"""
     <div style="
@@ -133,7 +133,7 @@ def feature_card(title, items):
     st.markdown(card_html, unsafe_allow_html=True)
 
 # Helper for rendering LeetCode styled tech stack cards
-def tech_card(title, emoji, items):
+def tech_card(title, items):
     items_html = "".join([f"<li style='margin-bottom:6px;'>{item}</li>" for item in items])
     card_html = f"""
     <div style="
