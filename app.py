@@ -26,17 +26,11 @@ st.caption(
 st.divider()
 
 # -------------------- SEARCH --------------------
-# Load previous usernames
-if os.path.exists("usernames.json"):
-    try:
-        with open("usernames.json", "r") as file:
-            usernames = json.load(file)
-            if not isinstance(usernames, list):
-                usernames = []
-    except Exception:
-        usernames = []
-else:
-    usernames = []
+# Recent searches (stored only for the current user's session)
+if "recent_searches" not in st.session_state:
+    st.session_state["recent_searches"] = []
+
+usernames = st.session_state["recent_searches"]
 
 st.subheader("🔍 Search Profile")
 
@@ -101,11 +95,11 @@ else:
                 # Save username to recent searches
                 if username in usernames:
                     usernames.remove(username)
-                usernames.insert(0, username)
-                usernames = usernames[:10]
 
-                with open("usernames.json", "w") as file:
-                    json.dump(usernames, file, indent=4)
+                usernames.insert(0, username)
+
+                # Keep only the 10 most recent searches
+                st.session_state["recent_searches"] = usernames[:10]
 
                 st.success("✅ Profile loaded successfully!")
                 st.info("👈 Open pages from the sidebar to explore analytics.")
