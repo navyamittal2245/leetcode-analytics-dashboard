@@ -8,10 +8,10 @@ skills = st.session_state.get("skills")
 calendar = st.session_state.get("calendar")
 
 if None in [profile, progress, contests, skills]:
-    st.warning("👈 Please analyze a profile on the Home page first.")
+    st.warning(" Please analyze a profile on the Home page first.")
     st.stop()
 
-st.title("🤖 AI Insights & Evaluation")
+st.title(" AI Insights & Evaluation")
 
 
 
@@ -145,14 +145,14 @@ Generate:
         return response.text
 
     except Exception as e:
-        return f"⚠️ {e}\n\n" + generate_fallback_report()
+        return f" {e}\n\n" + generate_fallback_report()
 
 
 # ------------------ TAB LAYOUT ------------------ #
-tab1, tab2, tab3 = st.tabs(["🎯 Interview Readiness", "⭐ Strengths & Weaknesses", "📝 Detailed Evaluation"])
+tab1, tab2, tab3 = st.tabs([" Interview Readiness", " Strengths & Weaknesses", " Detailed Evaluation"])
 
 with tab1:
-    st.subheader("📊 Interview Readiness Score")
+    st.subheader(" Interview Readiness Score")
     
     col_score1, col_score2 = st.columns([1, 2])
     with col_score1:
@@ -167,7 +167,7 @@ with tab1:
 
     st.divider()
     
-    st.subheader("🎯 Recommended Weekly Goal")
+    st.subheader(" Recommended Weekly Goal")
     goals = [
         f"Solve 5 Medium Problems in {weak[0]['tagName'] if weak else 'Recursion'}",
         "Solve 2 Hard Problems in your strongest topic",
@@ -178,14 +178,14 @@ with tab1:
         st.checkbox(g, value=False)
 
 with tab2:
-    st.subheader("⭐ Topic Performance Profile")
+    st.subheader(" Topic Performance Profile")
     
     col_str, col_weak = st.columns(2)
     with col_str:
         st.markdown("### Top Strengths")
         if all_topics:
             for topic in all_topics[:5]:
-                st.success(f"🟢 **{topic['tagName']}** ({topic['problemsSolved']} solved)")
+                st.success(f" **{topic['tagName']}** ({topic['problemsSolved']} solved)")
         else:
             st.info("No topic stats found.")
             
@@ -193,14 +193,14 @@ with tab2:
         st.markdown("### Improvement Opportunities")
         if weak:
             for topic in weak[:5]:
-                st.warning(f"🟡 **{topic['tagName']}** ({topic['problemsSolved']} solved)")
+                st.warning(f" **{topic['tagName']}** ({topic['problemsSolved']} solved)")
         else:
             st.info("No topic stats found.")
 
 with tab3:
-    st.subheader("📝 Detailed Evaluation Report")
+    st.subheader(" Detailed Evaluation Report")
     
-    if st.button("🚀 Generate AI Evaluation", use_container_width=True):
+    if st.button(" Generate AI Evaluation", use_container_width=True):
         with st.spinner("Analyzing profile statistics..."):
             if api_key:
                 report_text = generate_gemini_report(api_key)
@@ -221,7 +221,7 @@ with tab3:
         if st.button("Generate Downloadable PDF", use_container_width=True):
             with st.spinner("Building professional PDF..."):
                 generate_pdf(profile, progress, contests, skills, ai_report=st.session_state["ai_report_text"])
-                st.success("✅ PDF report built successfully!")
+                st.success(" PDF report built successfully!")
                 
             if os.path.exists("LeetCode_Report.pdf"):
                 with open("LeetCode_Report.pdf", "rb") as pdf:
