@@ -4,22 +4,22 @@ A modern Streamlit dashboard that analyzes any public LeetCode profile and prese
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
 🔗 https://leetcode-analytics-dashboard-npjqzuknrsaya4gk9xqfyd.streamlit.app/
 
 ---
 
-## ✨ Features
+##  Features
 
-### 👤 Profile Analytics
+###  Profile Analytics
 - User profile information
 - Global ranking
 - Reputation score
 - Education & profession (if available)
 - Social profile links
 
-### 📚 Question Analytics
+###  Question Analytics
 - Problems solved by difficulty
 - Topic-wise distribution
 - Strongest topics
@@ -27,25 +27,25 @@ A modern Streamlit dashboard that analyzes any public LeetCode profile and prese
 - Submission statistics
 - Interactive visualizations
 
-### 🏆 Contest Analytics
+###  Contest Analytics
 - Contest rating
 - Global ranking
 - Rating history
 - Contest participation statistics
 
-### 📅 Submission Calendar
+###  Submission Calendar
 - GitHub-style submission heatmap
 - Daily submission counts
 - Active streak analysis
 - CSV export support
 
-### 🤖 AI Insights
+###  AI Insights
 - Interview readiness score
 - Strengths & weaknesses analysis
 - Personalized study recommendations
 - AI-generated evaluation report using Gemini
 
-### 📄 Report Generation
+###  Report Generation
 - Download professional PDF reports
 - Includes profile statistics
 - Charts and analytics
@@ -53,11 +53,11 @@ A modern Streamlit dashboard that analyzes any public LeetCode profile and prese
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - Streamlit
@@ -77,7 +77,7 @@ A modern Streamlit dashboard that analyzes any public LeetCode profile and prese
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 leetcode-analytics-dashboard/
@@ -102,7 +102,7 @@ leetcode-analytics-dashboard/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 Clone the repository
 
@@ -130,7 +130,7 @@ streamlit run app.py
 
 ---
 
-## 🔑 Environment Variables
+##  Environment Variables
 
 Create a `.streamlit/secrets.toml` file:
 
@@ -142,7 +142,7 @@ The dashboard works without Gemini, but AI-generated insights require a valid AP
 
 ---
 
-## 📊 Dashboard Overview
+##  Dashboard Overview
 
 The dashboard includes:
 
@@ -155,7 +155,7 @@ The dashboard includes:
 
 ---
 
-## 🎯 Future Improvements
+##  Future Improvements
 
 - User authentication
 - Compare multiple LeetCode profiles
@@ -166,7 +166,7 @@ The dashboard includes:
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Navya Mittal**
 
@@ -174,6 +174,6 @@ GitHub: https://github.com/navyamittal2245
 
 ---
 
-## ⭐ Support
+##  Support
 
 If you found this project useful, consider giving it a ⭐ on GitHub!
