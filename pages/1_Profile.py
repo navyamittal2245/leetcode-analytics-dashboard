@@ -35,15 +35,15 @@ with profile_col2:
     company = profile_info.get("company") or "Not provided"
     job = profile_info.get("jobTitle") or "Not provided"
 
-    st.markdown(f"** Real Name:** {name}")
-    st.markdown(f"** Location:** {country}")
-    st.markdown(f"** Education:** {school}")
+    st.markdown(f"- ** Real Name:** {name}")
+    st.markdown(f"- ** Location:** {country}")
+    st.markdown(f"- ** Education:** {school}")
     
     if company != "Not provided" or job != "Not provided":
         company_job = f"{company} ({job})" if (company != "Not provided" and job != "Not provided") else (company if company != "Not provided" else job)
-        st.markdown(f"** Profession:** {company_job}")
+        st.markdown(f"- ** Profession:** {company_job}")
     else:
-        st.markdown("** Profession:** Not provided")
+        st.markdown("- ** Profession:** Not provided")
 
 st.divider()
 
