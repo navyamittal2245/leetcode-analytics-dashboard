@@ -14,7 +14,7 @@ st.caption(
 )
 
 if calendar is None:
-    st.warning("👈 Please search a user on the Home page first.")
+    st.warning(" Please search a user on the Home page first.")
     st.stop()
 
 # Safety boundary checks
@@ -28,7 +28,7 @@ if (not calendar or
 
 # ------------------ Header ------------------ #
 
-st.title("📅 Submission Calendar")
+st.title(" Submission Calendar")
 
 calendar_info = calendar["data"]["matchedUser"]["userCalendar"]
 
@@ -49,7 +49,7 @@ st.pyplot(fig, use_container_width=True)
 
 # ------------------ Legend ------------------ #
 
-st.subheader("🟩 Legend")
+st.subheader(" Legend")
 
 legend_cols = st.columns(5)
 
@@ -87,7 +87,7 @@ for col, color, label in zip(
 st.divider()
 # ------------------ Submission Statistics ------------------ #
 
-st.subheader("📈 Submission Statistics")
+st.subheader(" Submission Statistics")
 
 c1, c2, c3, c4 = st.columns(4)
 
@@ -133,7 +133,7 @@ st.divider()
 
 # ------------------ Submission Histogram ------------------ #
 
-st.subheader("📊 Daily Submission Distribution")
+st.subheader(" Daily Submission Distribution")
 
 fig2, ax = plt.subplots(figsize=(8,4))
 
@@ -163,7 +163,7 @@ st.divider()
 
 # ------------------ Top Active Days ------------------ #
 
-st.subheader("🏆 Top 10 Most Active Days")
+st.subheader(" Top 10 Most Active Days")
 
 
 top_days = (
@@ -191,7 +191,7 @@ st.divider()
 
 # ------------------ Search Submission History ------------------ #
 
-st.subheader("📋 Submission History")
+st.subheader(" Submission History")
 
 search = st.text_input(
     "🔍 Search by Date",
