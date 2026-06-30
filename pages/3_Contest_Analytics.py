@@ -5,7 +5,7 @@ from charts import contest_history_chart
 contests = st.session_state.get("contests")
 
 if contests is None:
-    st.warning("👈 Please enter a username on the Home page first.")
+    st.warning(" Please enter a username on the Home page first.")
     st.stop()
 
 st.title("🏆 Contest Analytics")
@@ -24,16 +24,16 @@ history = contests["data"].get("userContestRankingHistory", [])
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.metric("Rating ⚡", f"{round(contest_info['rating']):,}")
+    st.metric("Rating ", f"{round(contest_info['rating']):,}")
 
 with col2:
-    st.metric("Global Rank 🌍", f"{contest_info['globalRanking']:,}")
+    st.metric("Global Rank ", f"{contest_info['globalRanking']:,}")
 
 with col3:
-    st.metric("Contests Attended 📊", f"{int(contest_info['attendedContestsCount'])}")
+    st.metric("Contests Attended ", f"{int(contest_info['attendedContestsCount'])}")
 
 with col4:
-    st.metric("Top Percentage 📈", f"{contest_info['topPercentage']:.2f}%")
+    st.metric("Top Percentage ", f"{contest_info['topPercentage']:.2f}%")
 
 st.divider()
 
@@ -47,7 +47,7 @@ else:
     history_graph = contest_history_chart(history)
     st.pyplot(history_graph)
 
-    st.subheader("📋 Contest Performance Table")
+    st.subheader(" Contest Performance Table")
 
     contest_titles = []
     ratings = []
