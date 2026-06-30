@@ -35,15 +35,15 @@ with profile_col2:
     company = profile_info.get("company") or "Not provided"
     job = profile_info.get("jobTitle") or "Not provided"
 
-    st.markdown(f"- ** Real Name:** {name}")
-    st.markdown(f"- ** Location:** {country}")
-    st.markdown(f"- ** Education:** {school}")
+    st.markdown(f"- **Real Name:** {name}")
+    st.markdown(f"- **Location:** {country}")
+    st.markdown(f"- **Education:** {school}")
     
     if company != "Not provided" or job != "Not provided":
         company_job = f"{company} ({job})" if (company != "Not provided" and job != "Not provided") else (company if company != "Not provided" else job)
-        st.markdown(f"- ** Profession:** {company_job}")
+        st.markdown(f"- **Profession:** {company_job}")
     else:
-        st.markdown("- ** Profession:** Not provided")
+        st.markdown("- **Profession:** Not provided")
 
 st.divider()
 
@@ -71,17 +71,17 @@ has_socials = False
 if github:
     has_socials = True
     with social_cols[0]:
-        st.link_button(" GitHub Profile", github, use_container_width=True)
+        st.link_button("GitHub Profile", github, use_container_width=True)
 
 if linkedin:
     has_socials = True
     with social_cols[1]:
-        st.link_button(" LinkedIn Profile", linkedin, use_container_width=True)
+        st.link_button("LinkedIn Profile", linkedin, use_container_width=True)
 
 if twitter:
     has_socials = True
     with social_cols[2]:
-        st.link_button(" Twitter Profile", twitter, use_container_width=True)
+        st.link_button("Twitter Profile", twitter, use_container_width=True)
 
 if not has_socials:
     st.info("No external social links are linked to this LeetCode profile.")
